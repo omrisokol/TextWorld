@@ -16,8 +16,9 @@ public class Main {
         p.setCurrentRoom(g.getRoom("hall"));
         Level.Room current = p.getCurrentRoom();
 
-        Item item = new Item("food", "chocolate");
-        Item item1 = new Item("napkin", "clean");
+        Item item = new Item("food", "chocolate", g.getRoom("dungeon"));
+        Item item1 = new Item("napkin", "clean", g.getRoom("closet"));
+
         item.setCurrentRoom(g.getRoom("dungeon"));
         item1.setCurrentRoom(g.getRoom("closet"));
 
