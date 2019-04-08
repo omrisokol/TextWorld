@@ -11,10 +11,7 @@ public class Item extends Entity{
 
     @Override
     public String toString() {
-        return "Item{" +
-                "name='" +  + '\'' +
-                ", description='" + getName() + " " + getDescription() + '\'' +
-                '}';
+        return "Name: " + getName() + ", Description: " + getDescription();
     }
 
     public void setCurrentRoom(Level.Room newRoom) {

@@ -73,6 +73,12 @@ public class Level {
             }
             return null;
         }
+        public Room getRandomNeighbor(String name) {
+            if (neighbors.containsKey(name)) {
+            }
+            return null;
+        }
+
         public String getName(){
             return name;
         }
@@ -80,7 +86,7 @@ public class Level {
         public String getNeighborNames(){
             String names = "";
             for(Room room : neighbors.values()) {
-                names += room.getName() + "";
+                names += room.getName() + " ";
             }
             return names;
         }
