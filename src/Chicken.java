@@ -6,6 +6,6 @@ public class Chicken extends Creature{
 
     @Override
     public void act() {
-        
+        getRoom().getRandomNeighbor();
     }
 }
