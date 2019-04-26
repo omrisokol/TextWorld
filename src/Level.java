@@ -73,10 +73,9 @@ public class Level {
             }
             return null;
         }
-        public Room getRandomNeighbor(String name) {
-            if (neighbors.containsKey(name)) {
-            }
-            return null;
+       public Room getRandomNeighbor() {
+            int randNeighbor = (int)(Math.random()*neighbors.size());
+            return neighbors.get(randNeighbor);
         }
 
         public String getName(){
