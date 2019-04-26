@@ -1,9 +1,25 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
+        ArrayList<Creature> creatures = null;
+
         Level g = new Level();
+        Creature chicken = new Chicken("chicken", "crazy", g.getRoom("dungeon"));
+        Creature popstar = new Popstar("popstar", "fast", g.getRoom("closet"));
+        Creature wumpus = new Wumpus("wumpus", "slow", g.getRoom("hall"));
+
+        creatures.add(chicken);
+        creatures.add(popstar);
+        creatures.add(wumpus);
+
+        for (int i = 0; i < creatures.size(); i++) {
+            creatures.get(i).act();
+        }
+
+
 
         g.addRoom("hall");
         g.addRoom("closet");
@@ -24,6 +40,8 @@ public class Main {
 
         String response;
         Scanner in = new Scanner(System.in);
+
+
 
         String responseChoices = "go, look, add room, add cell, quit, and take are your commands";
         System.out.println(responseChoices);
@@ -71,4 +89,5 @@ public class Main {
         } while (!response.equals("quit"));
     }
 }
+
 
