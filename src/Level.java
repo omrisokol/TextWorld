@@ -36,6 +36,7 @@ public class Level {
         private HashMap<String, Room> neighbors;
         private ArrayList<Item> items;
         private String description;
+        private ArrayList<Creature> creatures;
 
         Room(String name){
             neighbors = new HashMap<String, Room>();
